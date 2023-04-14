@@ -20,5 +20,12 @@ Feature: Advanced Cucumber Demo
       | orange |
       | banana |    
 
-
+  Scenario: Exception Handling
+    Given I am hungry
+    Then I try to eat the meat except:
+      | I wait for 2 hours |
+    When I am full
+    Then I try to eat the meat except:
+      | I wait for 2 hours |         
+ 
        
